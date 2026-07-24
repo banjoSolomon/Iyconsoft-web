@@ -1,0 +1,151 @@
+.sol-hero {
+  background: #fff;
+}
+
+/* Title banner */
+.sol-hero__banner {
+  background: linear-gradient(135deg, #f0ebff 0%, #e8f4ff 100%);
+  padding: 40px 24px;
+  border-bottom: 1px solid #e8e0ff;
+}
+
+.sol-hero__page-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.sol-hero__highlight {
+  background: linear-gradient(90deg, #6c3ef4, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pink/red hero block */
+.sol-hero__block {
+  background: #CC2360;
+  padding: 48px 0 48px;
+  overflow: hidden;
+}
+
+.sol-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Left: text — add top padding to vertically center text in the block */
+.sol-hero__content {
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sol-hero__title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.sol-hero__text {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.8;
+  margin: 0 0 36px;
+  max-width: 440px;
+}
+
+.sol-hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sol-hero__actions .btn--dark {
+  background: #fff;
+  color: #1a1a6e;
+  border-color: #fff;
+}
+
+.sol-hero__actions .btn--dark:hover {
+  background: #f0f0f0;
+}
+
+.sol-hero__actions .btn--outline {
+  color: #fff;
+  border-color: #fff;
+}
+
+.sol-hero__actions .btn--outline:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Right: images */
+.sol-hero__images {
+  flex: 0 0 52%;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sol-hero__img-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Left column pushed down to match Figma stagger */
+.sol-hero__img-col--left {
+  margin-top: 80px;
+}
+
+/* Right column starts from the very top */
+.sol-hero__img-col--right {
+  margin-top: 0;
+}
+
+.sol-hero__img-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  line-height: 0;
+  transition: transform 0.3s ease;
+}
+
+.sol-hero__img-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Full image — no cropping, no fixed height */
+.sol-hero__img-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sol-hero__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .sol-hero__text {
+    max-width: 100%;
+  }
+
+  .sol-hero__images {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

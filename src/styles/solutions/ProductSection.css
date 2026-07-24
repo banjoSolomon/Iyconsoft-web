@@ -1,0 +1,268 @@
+.prod-section {
+  padding: 64px 0 0;
+  overflow: hidden;
+}
+
+/* ── Image row ── */
+.prod-section__imgs-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.prod-section__img-card {
+  flex: 1;
+  max-width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  line-height: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prod-section__img-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+}
+
+.prod-section__img-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prod-section__logo-center {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.prod-section__logo {
+  max-width: 220px;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Per-section logo overrides ── */
+
+/* MyCaller logo — bigger */
+#sol-caller .prod-section__logo {
+  max-width: 260px;
+  max-height: 180px;
+}
+
+/* iTravel logo — bigger */
+#sol-itravel .prod-section__logo {
+  max-width: 280px;
+  max-height: 180px;
+}
+
+/* VVPSS logo — bigger + pushed down */
+#sol-vvpss .prod-section__logo {
+  max-width: 280px;
+  max-height: 180px;
+  margin-top: 80px;
+}
+
+/* TeTicket logo — bigger */
+#sol-teticket .prod-section__logo {
+  max-width: 220px;
+  max-height: 160px;
+}
+
+/* ── Content row ── */
+.prod-section__content-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 56px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left */
+.prod-section__left {
+  flex: 1;
+}
+
+.prod-section__headline {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.prod-section__subheadline {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  margin: 0 0 16px;
+}
+
+.prod-section__desc {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 24px;
+}
+
+.prod-section__features-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 10px;
+}
+
+.prod-section__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.prod-section__features li {
+  font-size: 0.88rem;
+  color: #444;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.prod-section__check {
+  color: #27ae60;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Right */
+.prod-section__right {
+  flex: 1;
+}
+
+.prod-section__right-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.prod-section__right-body {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.prod-section__right-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 4px;
+}
+
+.prod-section__right-body p {
+  margin: 0 0 16px;
+}
+
+.prod-section__right-body ol {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.prod-section__demo-btn {
+  background: #CC2360;
+  color: #fff;
+  border-color: #CC2360;
+  padding: 13px 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.prod-section__demo-btn:hover {
+  background: #a81d50;
+  transform: translateY(-2px);
+}
+
+/* ── Benefits ── */
+.prod-section__benefits-block {
+  background: rgba(0,0,0,0.02);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding: 48px 24px 56px;
+}
+
+.prod-section__benefits-title {
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  margin: 0 0 32px;
+}
+
+.prod-section__benefits-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.prod-section__benefit-card {
+  border: 2px solid #6c3ef4;
+  border-radius: 12px;
+  padding: 28px 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  background: #fff;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.prod-section__benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .prod-section__imgs-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prod-section__img-card {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .prod-section__content-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .prod-section__benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .prod-section__benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
