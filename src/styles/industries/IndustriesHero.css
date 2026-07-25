@@ -173,7 +173,7 @@
 
 .ind-hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* ── Right: 2×2 card grid ── */
+/* ── Right: card grid matching Figma layout ── */
 .ind-hero__cards {
   flex: 1;
   display: grid;
@@ -181,9 +181,16 @@
   gap: 16px;
 }
 
-/* Third card spans full width */
+/* Government (3rd card) — spans both columns but centered, not stretched */
 .ind-hero__cards > :nth-child(3) {
   grid-column: 1 / -1;
+  width: calc(50% - 8px);
+  margin: 0 auto;
+}
+
+/* Government wide card — more padding since it spans full width */
+.ind-hero__cards > :nth-child(3) {
+  padding: 36px 32px;
 }
 
 /* ── Card ── */
@@ -255,5 +262,7 @@
   }
   .ind-hero__cards > :nth-child(3) {
     grid-column: 1;
+    width: 100%;
+    margin: 0;
   }
 }

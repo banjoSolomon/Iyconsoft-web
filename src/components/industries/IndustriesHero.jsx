@@ -3,7 +3,6 @@ import "../../styles/industries/IndustriesHero.css";
 import transportIcon from "../../assets/images/transportation.png";
 import telecomIcon from "../../assets/images/telicomication.png";
 import govIcon from "../../assets/images/goverment.png";
-import enterpriseIcon from "../../assets/images/enterprise.png";
 
 const cards = [
   {
@@ -16,7 +15,7 @@ const cards = [
   },
   {
     icon: telecomIcon,
-    color: "#6c3ef4",
+    color: "#2F3A95",
     iconBg: "#ede7f6",
     cardBg: "#ede7f6",
     title: "Telecommunications",
@@ -29,14 +28,6 @@ const cards = [
     cardBg: "#fff8e1",
     title: "Government",
     desc: "VVPSS provides secure digital voting, and survey capabilities for AGMs, elections, and stakeholder engagement processes.",
-  },
-  {
-    icon: enterpriseIcon,
-    color: "#CC2360",
-    iconBg: "#fce4ec",
-    cardBg: "#fdf5f7",
-    title: "Enterprise",
-    desc: "Scalable USSD and digital platforms that help businesses automate operations and improve service delivery.",
   },
 ];
 

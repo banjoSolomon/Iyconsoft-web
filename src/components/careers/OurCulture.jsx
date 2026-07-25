@@ -1,24 +1,23 @@
 import React from "react";
 import "../../styles/careers/OurCulture.css";
-import cultureImg from "../../assets/images/image 4.png";
-import teamImg from "../../assets/images/image 5.png";
 import bulbIcon from "../../assets/images/LightbulbFilament.png";
 import shieldIcon from "../../assets/images/ShieldCheck.png";
 import usersIcon from "../../assets/images/UsersFour.png";
 import medalIcon from "../../assets/images/Medal.png";
 
 const cultureValues = [
-  { icon: bulbIcon,  label: "Innovation",   bg: "#00bcd4" },
-  { icon: shieldIcon, label: "Integrity",   bg: "#1a1a6e" },
-  { icon: usersIcon, label: "Collaboration", bg: "#CC2360" },
-  { icon: medalIcon, label: "Excellence",   bg: "#f39c12" },
+  { icon: bulbIcon,   label: "Innovation",    bg: "#00bcd4" },
+  { icon: shieldIcon, label: "Integrity",     bg: "#1a1a6e" },
+  { icon: usersIcon,  label: "Collaboration", bg: "#CC2360" },
+  { icon: medalIcon,  label: "Excellence",    bg: "#f39c12" },
 ];
 
 const OurCulture = () => {
   return (
     <section className="culture">
       <div className="culture__container">
-        {/* Left: heading + value cards */}
+
+        {/* Left: heading + description only */}
         <div className="culture__left reveal-left">
           <p className="culture__eyebrow">Our DNA</p>
           <h2 className="culture__heading">
@@ -28,6 +27,10 @@ const OurCulture = () => {
             Everything we build reflects who we are. Our values aren't just words —
             they're the foundation of every decision, product, and partnership at Iyconsoft.
           </p>
+        </div>
+
+        {/* Right: 2×2 value cards */}
+        <div className="culture__cards-wrap reveal-right">
           <div className="culture__cards stagger">
             {cultureValues.map((v) => (
               <div
@@ -44,21 +47,6 @@ const OurCulture = () => {
           </div>
         </div>
 
-        {/* Right: stacked images */}
-        <div className="culture__images reveal-right">
-          <div className="culture__img-stack">
-            <img
-              src={cultureImg}
-              alt="Iyconsoft workplace"
-              className="culture__img culture__img--top"
-            />
-            <img
-              src={teamImg}
-              alt="Iyconsoft team"
-              className="culture__img culture__img--bottom"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

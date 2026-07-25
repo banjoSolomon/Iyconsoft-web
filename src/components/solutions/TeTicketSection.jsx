@@ -69,7 +69,7 @@ const TeTicketSection = () => (
     id="sol-teticket"
     bgColor="#fff8f0"
     accentColor="#f39c12"
-    benefitsBg="linear-gradient(135deg, #CC2360 0%, #9b1a47 50%, #6c0f30 100%)"
+    benefitsBg="linear-gradient(135deg, #f39c12 0%, #e67e22 50%, #d35400 100%)"
     imgLeft={imgLeft}
     imgRight={imgRight}
     logoImg={logo}
@@ -92,7 +92,7 @@ const TeTicketSection = () => (
       "Full transparency",
       "Improved efficiency",
     ]}
-    benefitBorder="#1a1a6e"
+    benefitBorder="#f39c12"
   />
 );
 

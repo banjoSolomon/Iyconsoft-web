@@ -3,7 +3,7 @@
    ============================================ */
 
 .culture {
-  background: #fff;
+  background: #f4f6fb;
   padding: 90px 0;
 }
 
@@ -13,12 +13,12 @@
   padding: 0 24px;
   display: flex;
   align-items: center;
-  gap: 72px;
+  gap: 80px;
 }
 
-/* ── Left ── */
+/* ── Left: text only ── */
 .culture__left {
-  flex: 1.1;
+  flex: 1;
   min-width: 0;
 }
 
@@ -32,68 +32,76 @@
 }
 
 .culture__heading {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 800;
   color: #1a1a2e;
   line-height: 1.2;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 .culture__sub {
   font-size: 0.93rem;
   color: #666;
   line-height: 1.8;
-  margin: 0 0 36px;
-  max-width: 440px;
+  margin: 0;
+  max-width: 400px;
 }
 
-/* ── 2x2 culture cards ── */
+/* ── Right: 2×2 cards grid ── */
+.culture__cards-wrap {
+  flex: 1.1;
+  min-width: 0;
+}
+
 .culture__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  max-width: 420px;
 }
 
 .culture__card {
   background: var(--culture-bg, #00bcd4);
   border-radius: 16px;
-  padding: 28px 20px 22px;
+  padding: 36px 20px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   cursor: default;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
 }
 
 .culture__card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
   border-radius: inherit;
   pointer-events: none;
 }
 
 .culture__card:hover {
   transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
+/* Icon container — frosted white rounded square */
 .culture__card-icon {
   width: 64px;
   height: 64px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.22);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 14px;
   transition: transform 0.3s ease;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .culture__card:hover .culture__card-icon {
@@ -108,45 +116,11 @@
 }
 
 .culture__card-label {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   text-align: center;
-}
-
-/* ── Right: stacked images ── */
-.culture__images {
-  flex: 1;
-  min-width: 0;
-}
-
-.culture__img-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.culture__img {
-  width: 100%;
-  border-radius: 16px;
-  object-fit: contain;
-  background: #f4f6fb;
-  display: block;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.culture__img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-}
-
-.culture__img--top {
-  /* no fixed height — image shows at its natural ratio */
-}
-
-.culture__img--bottom {
-  /* no fixed height — image shows at its natural ratio */
 }
 
 /* ── Responsive ── */
@@ -156,23 +130,24 @@
     gap: 48px;
   }
 
+  .culture__left {
+    width: 100%;
+  }
+
+  .culture__cards-wrap {
+    width: 100%;
+  }
+
   .culture__cards {
-    max-width: 100%;
-  }
-
-  .culture__img-stack {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .culture__img--top,
-  .culture__img--bottom {
-    flex: 1;
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 560px) {
-  .culture__img-stack {
-    flex-direction: column;
+@media (max-width: 480px) {
+  .culture__card {
+    padding: 28px 16px 22px;
+    aspect-ratio: auto;
+    min-height: 140px;
   }
 }
