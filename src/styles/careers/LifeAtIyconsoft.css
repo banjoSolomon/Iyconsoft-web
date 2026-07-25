@@ -28,10 +28,10 @@
   gap: 20px;
 }
 
-/* Make last card span full width if odd */
-.life-at__card:last-child:nth-child(odd) {
+/* Innovation (3rd card) — centered under the two, same size as siblings */
+.life-at__card:last-child:nth-child(3) {
   grid-column: 1 / -1;
-  max-width: 220px;
+  width: calc(50% - 10px);
   margin: 0 auto;
 }
 
@@ -154,9 +154,9 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .life-at__card:last-child:nth-child(odd) {
+  .life-at__card:last-child:nth-child(3) {
     grid-column: auto;
-    max-width: none;
+    width: 100%;
     margin: 0;
   }
 }
@@ -164,5 +164,11 @@
 @media (max-width: 600px) {
   .life-at__cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .life-at__card:last-child:nth-child(3) {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    margin: 0 auto;
   }
 }
