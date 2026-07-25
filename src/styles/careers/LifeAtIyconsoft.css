@@ -1,0 +1,168 @@
+/* ============================================
+   LIFE AT IYCONSOFT — LifeAtIyconsoft.css
+   ============================================ */
+
+.life-at {
+  background: #f8f9ff;
+  padding: 90px 0;
+}
+
+.life-at__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+/* ── Left: cards ── */
+.life-at__cards-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.life-at__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Make last card span full width if odd */
+.life-at__card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.life-at__card {
+  background: var(--card-bg, #fce4ec);
+  border-radius: 20px;
+  padding: 36px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.life-at__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, transparent 70%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.life-at__card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.life-at__card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: transform 0.3s ease;
+}
+
+.life-at__card:hover .life-at__card-icon {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+.life-at__card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.life-at__card-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ── Right: text ── */
+.life-at__text {
+  flex: 1.1;
+  min-width: 0;
+}
+
+.life-at__heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+.life-at__brand {
+  color: #6c3ef4;
+}
+
+.life-at__desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 32px;
+}
+
+.life-at__points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.life-at__point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.93rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.life-at__point-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .life-at__container {
+    flex-direction: column-reverse;
+    gap: 48px;
+  }
+
+  .life-at__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .life-at__card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .life-at__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

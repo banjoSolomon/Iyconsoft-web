@@ -39,7 +39,11 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li><a href="#insights" className="navbar__link" onClick={closeMenu}>Insights</a></li>
-          <li><a href="#careers" className="navbar__link" onClick={closeMenu}>Careers</a></li>
+          <li>
+            <NavLink to="/careers" className={({ isActive }) => `navbar__link${isActive ? " navbar__link--active" : ""}`} onClick={closeMenu}>
+              Careers
+            </NavLink>
+          </li>
           <li><a href="#faq" className="navbar__link" onClick={closeMenu}>FAQs</a></li>
         </ul>
 

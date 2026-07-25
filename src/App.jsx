@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SolutionsPage from "./pages/SolutionsPage";
 import IndustriesPage from "./pages/IndustriesPage";
+import CareersPage from "./pages/CareersPage";
 
 // Scroll reveal runs on every route render
 const AppContent = () => {
@@ -52,6 +53,7 @@ const AppContent = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/solutions" element={<SolutionsPage />} />
         <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/careers" element={<CareersPage />} />
       </Routes>
       <Footer />
     </div>

@@ -1,0 +1,121 @@
+/* ============================================
+   CAREERS CTA — CareersCTA.css
+   ============================================ */
+
+@keyframes cta-orb-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50%       { transform: scale(1.2); opacity: 0.8; }
+}
+
+.careers-cta {
+  background: linear-gradient(135deg, #1a1a6e 0%, #3a2dad 50%, #6c3ef4 100%);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.careers-cta__orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.careers-cta__orb--1 {
+  width: 320px;
+  height: 320px;
+  top: -100px;
+  right: -80px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: cta-orb-pulse 5s ease-in-out infinite;
+}
+
+.careers-cta__orb--2 {
+  width: 200px;
+  height: 200px;
+  bottom: -70px;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.04);
+  animation: cta-orb-pulse 7s 1s ease-in-out infinite reverse;
+}
+
+.careers-cta__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.careers-cta__text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.careers-cta__title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+.careers-cta__sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 480px;
+}
+
+.careers-cta__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.careers-cta__btn {
+  padding: 13px 28px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.careers-cta__btn--primary {
+  background: #CC2360;
+  color: #fff;
+  border-color: #CC2360;
+}
+
+.careers-cta__btn--primary:hover {
+  background: #a81d50;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 35, 96, 0.4);
+}
+
+.careers-cta__btn--outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.careers-cta__btn--outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .careers-cta__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

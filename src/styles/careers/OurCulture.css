@@ -1,0 +1,178 @@
+/* ============================================
+   OUR CULTURE — OurCulture.css
+   ============================================ */
+
+.culture {
+  background: #fff;
+  padding: 90px 0;
+}
+
+.culture__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+/* ── Left ── */
+.culture__left {
+  flex: 1.1;
+  min-width: 0;
+}
+
+.culture__eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #CC2360;
+  margin: 0 0 10px;
+}
+
+.culture__heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.culture__sub {
+  font-size: 0.93rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0 0 36px;
+  max-width: 440px;
+}
+
+/* ── 2x2 culture cards ── */
+.culture__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 420px;
+}
+
+.culture__card {
+  background: var(--culture-bg, #00bcd4);
+  border-radius: 16px;
+  padding: 28px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.culture__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.culture__card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.culture__card-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.culture__card:hover .culture__card-icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.culture__card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.culture__card-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* ── Right: stacked images ── */
+.culture__images {
+  flex: 1;
+  min-width: 0;
+}
+
+.culture__img-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.culture__img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: contain;
+  background: #f4f6fb;
+  display: block;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.culture__img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.culture__img--top {
+  /* no fixed height — image shows at its natural ratio */
+}
+
+.culture__img--bottom {
+  /* no fixed height — image shows at its natural ratio */
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .culture__container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .culture__cards {
+    max-width: 100%;
+  }
+
+  .culture__img-stack {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .culture__img--top,
+  .culture__img--bottom {
+    flex: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .culture__img-stack {
+    flex-direction: column;
+  }
+}

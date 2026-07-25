@@ -1,0 +1,163 @@
+/* ============================================
+   WHY JOIN US — WhyJoinUs.css
+   ============================================ */
+
+.why-join {
+  background: #fff;
+  padding: 90px 0;
+}
+
+.why-join__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+/* ── Left text ── */
+.why-join__left {
+  flex: 0 0 300px;
+  min-width: 0;
+}
+
+.why-join__eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #CC2360;
+  margin: 0 0 10px;
+}
+
+.why-join__heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.15;
+  margin: 0 0 18px;
+}
+
+.why-join__sub {
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0 0 32px;
+}
+
+.why-join__cta {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #1a1a6e;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.why-join__cta:hover {
+  background: #12124e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 26, 110, 0.3);
+}
+
+/* ── 2×2 cards grid ── */
+.why-join__cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.why-join__card {
+  background: var(--card-bg, #fff8ec);
+  border-radius: 16px;
+  padding: 30px 24px;
+  border: 1.5px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-join__card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--card-accent, #f39c12);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  border-radius: 0 0 16px 16px;
+}
+
+.why-join__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--card-accent, #f39c12);
+}
+
+.why-join__card:hover::after {
+  transform: scaleX(1);
+}
+
+.why-join__card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--card-accent, #f39c12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.why-join__card:hover .why-join__card-icon {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.why-join__card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.why-join__card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--card-accent, #f39c12);
+  margin: 0 0 8px;
+}
+
+.why-join__card-desc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .why-join__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .why-join__left {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .why-join__cards {
+    grid-template-columns: 1fr;
+  }
+}
