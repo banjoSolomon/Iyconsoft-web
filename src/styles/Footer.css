@@ -108,12 +108,34 @@
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.25s ease, padding-left 0.25s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.footer__links a::before {
+  content: "›";
+  position: absolute;
+  left: -14px;
+  opacity: 0;
+  transition: opacity 0.25s ease, left 0.25s ease;
+  font-weight: 700;
 }
 
 .footer__links a:hover {
-  color: #fff;
+  padding-left: 6px;
+  color: #CC2360;
 }
+
+.footer__links a:hover::before {
+  opacity: 1;
+  left: -10px;
+}
+
+/* Give each column a distinct hover color */
+.footer__col:nth-child(2) .footer__links a:hover { color: #CC2360; }  /* Quick Links — pink  */
+.footer__col:nth-child(3) .footer__links a:hover { color: #00bcd4; }  /* Solutions  — teal  */
+.footer__col:nth-child(4) .footer__links a:hover { color: #6c3ef4; }  /* Legal      — purple */
 
 .footer__hours {
   font-size: 0.85rem;

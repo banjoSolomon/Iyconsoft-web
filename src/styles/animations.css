@@ -201,7 +201,4 @@
   transition: padding-left 0.25s ease, color 0.25s ease;
 }
 
-.footer__links a:hover {
-  padding-left: 8px;
-  color: #fff !important;
-}
+/* hover color handled per-column in Footer.css */
