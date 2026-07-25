@@ -11,14 +11,14 @@ const features = [
     icon: noInternetImg,
     title: "No Internet Required",
     description: "Access services seamlessly without relying on internet connectivity.",
-    color: "#e74c3c",
+    color: "#CC2360",
   },
   {
     id: 2,
     icon: noAppImg,
     title: "No App Needed",
     description: "No downloads or installations required.",
-    color: "#e74c3c",
+    color: "#f39c12",
   },
   {
     id: 3,

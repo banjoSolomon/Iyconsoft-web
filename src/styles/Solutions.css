@@ -69,8 +69,8 @@
 
 .solution-card__icon {
   flex-shrink: 0;
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -82,6 +82,8 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  filter: none;
 }
 
 .solution-card__body {
@@ -103,8 +105,19 @@
 }
 
 .solution-card__btn {
+  display: inline-block;
   padding: 10px 24px;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.solution-card__btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
 /* Responsive */

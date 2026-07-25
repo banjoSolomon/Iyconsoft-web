@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Solutions.css";
-import myCallerIcon from "../assets/images/mycaller.png";
-import teticketIcon from "../assets/images/eticket.png";
-import itravelIcon from "../assets/images/itravel.png";
-import vvpssIcon from "../assets/images/vpss.png";
+import myCallerIcon from "../assets/images/Group 39.png";
+import teticketIcon from "../assets/images/Group 41.png";
+import itravelIcon from "../assets/images/itravel_logo-removebg-preview (1) 1.png";
+import vvpssIcon from "../assets/images/vvpss logo 1.png";
 
 const solutions = [
   {
@@ -12,7 +12,7 @@ const solutions = [
     iconBg: "#f0ebff",
     title: "MyCaller",
     description: "Know who's calling before you pick up.",
-    btnClass: "btn--purple",
+    btnColor: "#6c3ef4",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const solutions = [
     iconBg: "#fff4e0",
     title: "Teticket",
     description: "Seamless digital ticketing and payment collections.",
-    btnClass: "btn--orange",
+    btnColor: "#f39c12",
   },
   {
     id: 3,
@@ -28,15 +28,15 @@ const solutions = [
     iconBg: "#e0f8ff",
     title: "iTravel",
     description: "Travel booking made easy.",
-    btnClass: "btn--teal",
+    btnColor: "#00bcd4",
   },
   {
     id: 4,
     icon: vvpssIcon,
-    iconBg: "#f0ebff",
+    iconBg: "#eae4ff",
     title: "VVPSS",
     description: "Digital governance made simple.",
-    btnClass: "btn--dark",
+    btnColor: "#1a1a6e",
   },
 ];
 
@@ -65,7 +65,15 @@ const Solutions = () => {
               <div className="solution-card__body">
                 <h3 className="solution-card__title">{solution.title}</h3>
                 <p className="solution-card__desc">{solution.description}</p>
-                <a href="#solutions" className={`btn ${solution.btnClass} solution-card__btn`}>
+                <a
+                  href="#solutions"
+                  className="solution-card__btn"
+                  style={{
+                    background: solution.btnColor,
+                    color: "#fff",
+                    "--btn-hover": solution.btnColor,
+                  }}
+                >
                   Learn More
                 </a>
               </div>
