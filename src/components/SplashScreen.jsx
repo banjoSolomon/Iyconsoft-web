@@ -6,9 +6,9 @@ const SplashScreen = ({ onFinish }) => {
   const [hiding, setHiding] = useState(false);
 
   useEffect(() => {
-    // Start fade-out after 2.2s, then notify parent
-    const fadeTimer = setTimeout(() => setHiding(true), 2200);
-    const doneTimer = setTimeout(() => onFinish(), 2800);
+    // Start fade-out after 4.4s, then notify parent at 5s
+    const fadeTimer = setTimeout(() => setHiding(true), 4400);
+    const doneTimer = setTimeout(() => onFinish(), 5000);
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(doneTimer);

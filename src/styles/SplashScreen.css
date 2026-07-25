@@ -161,7 +161,7 @@
   width: 0%;
   border-radius: 999px;
   background: linear-gradient(90deg, #CC2360 0%, #6c3ef4 50%, #00bcd4 100%);
-  animation: splash-barFill 2s 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: splash-barFill 4s 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   box-shadow: 0 0 10px rgba(108, 62, 244, 0.6);
 }
 
