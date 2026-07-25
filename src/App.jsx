@@ -5,6 +5,7 @@ import "./styles/animations.css";
 
 import useScrollReveal from "./hooks/useScrollReveal";
 
+import SplashScreen from "./components/SplashScreen";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -61,9 +62,12 @@ const AppContent = () => {
 };
 
 function App() {
+  const [showSplash, setShowSplash] = React.useState(true);
+
   return (
     <BrowserRouter>
-      <AppContent />
+      {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
+      {!showSplash && <AppContent />}
     </BrowserRouter>
   );
 }
