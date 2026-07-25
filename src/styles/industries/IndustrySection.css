@@ -1,0 +1,105 @@
+/* ── Shared Industry Section ── */
+.ind-section {
+  padding: 80px 0;
+}
+
+.ind-section--light  { background: #fff; }
+.ind-section--pink   { background: #fff0f5; }
+.ind-section--cream  { background: #fff8f0; }
+.ind-section--purple { background: #f5f0ff; }
+
+.ind-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Reverse layout: image left, text right */
+.ind-section__container--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text column */
+.ind-section__content {
+  flex: 1;
+}
+
+.ind-section__title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.ind-section__text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+
+/* CTA button — outlined style */
+.ind-section__btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 28px;
+  border: 2px solid;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.25s, color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.ind-section__btn:hover {
+  background: var(--btn-color);
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.ind-section__btn-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* Image column */
+.ind-section__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ind-section__image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.ind-section__image img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 56px rgba(0,0,0,0.16);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ind-section__container,
+  .ind-section__container--reverse {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ind-section__image img {
+    max-width: 100%;
+  }
+}

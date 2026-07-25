@@ -33,7 +33,11 @@ const Navbar = () => {
               Solutions
             </NavLink>
           </li>
-          <li><a href="#industries" className="navbar__link" onClick={closeMenu}>Industries</a></li>
+          <li>
+            <NavLink to="/industries" className={({ isActive }) => `navbar__link${isActive ? " navbar__link--active" : ""}`} onClick={closeMenu}>
+              Industries
+            </NavLink>
+          </li>
           <li><a href="#insights" className="navbar__link" onClick={closeMenu}>Insights</a></li>
           <li><a href="#careers" className="navbar__link" onClick={closeMenu}>Careers</a></li>
           <li><a href="#faq" className="navbar__link" onClick={closeMenu}>FAQs</a></li>

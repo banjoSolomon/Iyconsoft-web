@@ -24,6 +24,7 @@ const TeTicketSection = () => (
     id="sol-teticket"
     bgColor="#fff8f0"
     accentColor="#f39c12"
+    benefitsBg="linear-gradient(135deg, #CC2360 0%, #9b1a47 50%, #6c0f30 100%)"
     imgLeft={imgLeft}
     imgRight={imgRight}
     logoImg={logo}

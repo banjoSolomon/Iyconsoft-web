@@ -1,7 +1,7 @@
 import React from "react";
 import ProductSection from "./ProductSection";
 import imgLeft from "../../assets/images/vpss2solutionimage.png";
-import imgRight from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 5.png";
+import imgRight from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 3 (1).png";
 import logo from "../../assets/images/vvpss logo 1.png";
 
 const rightContent = (
@@ -17,8 +17,9 @@ const rightContent = (
 const VVPSSSection = () => (
   <ProductSection
     id="sol-vvpss"
-    bgColor="#f5f0ff"
-    accentColor="#6c3ef4"
+    bgColor="linear-gradient(160deg, #f0fff4 0%, #e8f5e9 60%, #f5fff8 100%)"
+    accentColor="#1a6e3a"
+    benefitsBg="linear-gradient(135deg, #1a6e3a 0%, #2e7d32 50%, #43a047 100%)"
     imgLeft={imgLeft}
     imgRight={imgRight}
     logoImg={logo}
@@ -38,12 +39,12 @@ const VVPSSSection = () => (
     rightTitle="VVPSS is Ideal For:"
     rightContent={rightContent}
     benefits={[
-      "Reduced queue",
-      "Improved passenger experience",
-      "Revenue tracking",
-      "Operational efficiency",
+      "Full transparency",
+      "Zero disenfranchisement",
+      "Audit-compliant results",
+      "Remote participation",
     ]}
-    benefitBorder="#00bcd4"
+    benefitBorder="#2e7d32"
   />
 );
 

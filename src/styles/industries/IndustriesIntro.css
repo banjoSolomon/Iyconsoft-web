@@ -1,0 +1,25 @@
+.ind-intro {
+  padding: 72px 24px;
+  background: #fff;
+  border-top: 4px solid #6c3ef4;
+}
+
+.ind-intro__container {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ind-intro__title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 20px;
+}
+
+.ind-intro__text {
+  font-size: 0.97rem;
+  color: #555;
+  line-height: 1.85;
+  margin: 0;
+}

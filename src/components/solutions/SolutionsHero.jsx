@@ -9,9 +9,15 @@ const SolutionsHero = () => {
     <section className="sol-hero">
       {/* Page title banner */}
       <div className="sol-hero__banner">
-        <h1 className="sol-hero__page-title">
-          Our <span className="sol-hero__highlight">Solutions</span>
-        </h1>
+        <div className="sol-hero__banner-inner">
+          <h1 className="sol-hero__page-title">
+            Our{" "}
+            <span className="sol-hero__highlight-word">Sol</span><span className="sol-hero__highlight-shimmer">utions</span>
+          </h1>
+          <p className="sol-hero__banner-sub">
+            Innovative products designed to simplify everyday experiences
+          </p>
+        </div>
       </div>
 
       {/* Main hero block */}

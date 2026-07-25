@@ -1,6 +1,6 @@
 import React from "react";
 import ProductSection from "./ProductSection";
-import imgLeft from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 3.png";
+import imgLeft from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 5 (1).png";
 import imgRight from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 4.png";
 import logo from "../../assets/images/itravel_logo-removebg-preview (1) 1.png";
 
@@ -23,6 +23,7 @@ const ITravelSection = () => (
     id="sol-itravel"
     bgColor="#e8f8ff"
     accentColor="#00bcd4"
+    benefitsBg="linear-gradient(135deg, #006064 0%, #00838f 50%, #00bcd4 100%)"
     imgLeft={imgLeft}
     imgRight={imgRight}
     logoImg={logo}

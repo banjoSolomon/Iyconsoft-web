@@ -24,6 +24,7 @@ const MyCallerSection = () => (
     id="sol-caller"
     bgColor="#fff"
     accentColor="#6c3ef4"
+    benefitsBg="linear-gradient(135deg, #1a1a6e 0%, #2d2d9e 50%, #6c3ef4 100%)"
     imgLeft={imgLeft}
     imgRight={imgRight}
     logoImg={logo}

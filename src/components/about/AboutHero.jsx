@@ -7,9 +7,15 @@ const AboutHero = () => {
     <section className="about-hero">
       {/* Page title banner */}
       <div className="about-hero__banner">
-        <h1 className="about-hero__page-title">
-          About <span className="about-hero__highlight">Iyconsoft</span>
-        </h1>
+        <div className="about-hero__banner-inner">
+          <h1 className="about-hero__page-title">
+            About{" "}
+            <span className="about-hero__highlight-word">Iy</span><span className="about-hero__highlight-shimmer">consoft</span>
+          </h1>
+          <p className="about-hero__banner-sub">
+            Transforming everyday experiences through digital innovation
+          </p>
+        </div>
       </div>
 
       {/* Main content */}
