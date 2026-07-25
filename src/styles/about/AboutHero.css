@@ -193,9 +193,21 @@
   .about-hero__container {
     flex-direction: column;
     gap: 40px;
+    padding: 40px 20px;
   }
 
   .about-hero__image {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero__banner {
+    padding: 40px 20px;
+  }
+
+  .about-hero__banner::before,
+  .about-hero__banner::after {
+    display: none;
   }
 }
