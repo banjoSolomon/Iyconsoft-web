@@ -1,0 +1,91 @@
+/* ── iTravel Customer Journey Timeline ── */
+
+.itravel-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.itravel-timeline__step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Vertical connector line between steps */
+.itravel-timeline__connector {
+  position: absolute;
+  left: 20px;
+  top: 46px;
+  width: 2px;
+  height: calc(100% + 2px);
+  background: linear-gradient(180deg, #00bcd4, rgba(0,188,212,0.15));
+  z-index: 0;
+}
+
+/* Icon circle */
+.itravel-timeline__icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00bcd4, #006064);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 14px rgba(0,188,212,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.itravel-timeline__step:hover .itravel-timeline__icon {
+  transform: scale(1.12);
+  box-shadow: 0 6px 20px rgba(0,188,212,0.5);
+}
+
+.itravel-timeline__icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+  fill: none;
+}
+
+/* Text */
+.itravel-timeline__body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid rgba(0,188,212,0.2);
+  border-radius: 10px;
+  padding: 10px 18px;
+  flex: 1;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.itravel-timeline__step:hover .itravel-timeline__body {
+  border-color: #00bcd4;
+  box-shadow: 0 4px 16px rgba(0,188,212,0.12);
+  transform: translateX(4px);
+}
+
+.itravel-timeline__num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #00bcd4;
+  letter-spacing: 1.5px;
+  flex-shrink: 0;
+  background: rgba(0,188,212,0.08);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.itravel-timeline__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}

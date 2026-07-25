@@ -186,18 +186,18 @@
 .prod-section__demo-btn {
   background: #CC2360;
   color: #fff;
-  border-color: #CC2360;
+  border: 2px solid #CC2360;
   padding: 13px 36px;
   font-size: 0.95rem;
   font-weight: 700;
   border-radius: 8px;
   display: inline-block;
   text-decoration: none;
-  transition: background 0.25s, transform 0.25s;
+  transition: filter 0.25s, transform 0.25s;
 }
 
 .prod-section__demo-btn:hover {
-  background: #a81d50;
+  filter: brightness(0.85);
   transform: translateY(-2px);
 }
 

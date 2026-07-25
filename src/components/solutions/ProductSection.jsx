@@ -112,7 +112,13 @@ const ProductSection = ({
             {rightTitle}
           </h3>
           <div className="prod-section__right-body">{rightContent}</div>
-          <a href="#contact" className="prod-section__demo-btn">Request Demo</a>
+          <a
+            href="#contact"
+            className="prod-section__demo-btn"
+            style={{ background: accentColor, borderColor: accentColor }}
+          >
+            Request Demo
+          </a>
         </div>
       </div>
 

@@ -1,0 +1,80 @@
+/* ── TeTicket Core Services Grid ── */
+.teticket-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.teticket-services__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid rgba(243,156,18,0.18);
+  border-radius: 12px;
+  padding: 13px 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: default;
+}
+
+.teticket-services__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(243,156,18,0.14);
+  border-color: #f39c12;
+}
+
+/* Icon circle */
+.teticket-services__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(243,156,18,0.3);
+  transition: transform 0.25s ease;
+}
+
+.teticket-services__item:hover .teticket-services__icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.teticket-services__icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Number + label */
+.teticket-services__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.teticket-services__num {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #f39c12;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.teticket-services__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  line-height: 1.3;
+}
+
+@media (max-width: 600px) {
+  .teticket-services {
+    grid-template-columns: 1fr;
+  }
+}
