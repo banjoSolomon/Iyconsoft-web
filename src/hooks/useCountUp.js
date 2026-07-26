@@ -30,7 +30,6 @@ const useCountUp = (target, duration = 2000, startOnView = true) => {
     if (!started) return;
 
     let startTime = null;
-    const startVal = 0;
 
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
