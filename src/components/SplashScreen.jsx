@@ -29,7 +29,7 @@ const SplashScreen = ({ onFinish }) => {
         </div>
 
         {/* Brand name */}
-        <p className="splash__brand">iyconsoft <span className="splash__brand-solutions">solutions</span></p>
+        <p className="splash__brand">Iyconsoft <span className="splash__brand-solutions">Solutions</span></p>
 
         {/* Loading bar */}
         <div className="splash__bar-track">
