@@ -47,7 +47,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: linear-gradient(135deg, #0e0e3f 0%, #1a1a6e 45%, #2d1b8e 75%, #6c3ef4 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 50%, #e8eeff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +65,6 @@
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  opacity: 0.12;
   animation: splash-orbFloat ease-in-out infinite;
 }
 
@@ -74,7 +73,7 @@
   height: 500px;
   top: -120px;
   right: -100px;
-  background: radial-gradient(circle, #CC2360, transparent 70%);
+  background: radial-gradient(circle, rgba(108, 62, 244, 0.08), transparent 70%);
   animation-duration: 7s;
 }
 
@@ -83,7 +82,7 @@
   height: 380px;
   bottom: -80px;
   left: -80px;
-  background: radial-gradient(circle, #00bcd4, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.07), transparent 70%);
   animation-duration: 9s;
   animation-delay: 1s;
 }
@@ -93,10 +92,9 @@
   height: 260px;
   top: 40%;
   left: 30%;
-  background: radial-gradient(circle, #f39c12, transparent 70%);
+  background: radial-gradient(circle, rgba(204, 35, 96, 0.05), transparent 70%);
   animation-duration: 11s;
   animation-delay: 2s;
-  opacity: 0.07;
 }
 
 /* ── Center content ── */
@@ -109,22 +107,20 @@
   z-index: 1;
 }
 
-/* ── Logo wrapper — glowing ring ── */
+/* ── Logo wrapper ── */
 .splash__logo-wrap {
   width: 110px;
   height: 110px;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(108, 62, 244, 0.06);
   backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(108, 62, 244, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 18px;
   animation: splash-logoIn 0.8s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-  box-shadow:
-    0 0 0 0 rgba(108, 62, 244, 0.5),
-    0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 40px rgba(108, 62, 244, 0.1), 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .splash__logo {
@@ -138,7 +134,7 @@
 .splash__brand {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #fff;
+  color: #1a1a6e;
   letter-spacing: 2px;
   text-transform: lowercase;
   margin: 0;
@@ -146,11 +142,16 @@
   animation: splash-brandIn 0.8s 0.7s ease both;
 }
 
+.splash__brand-solutions {
+  color: #CC2360;
+  font-weight: 600;
+}
+
 /* ── Loading bar ── */
 .splash__bar-track {
   width: 200px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(108, 62, 244, 0.12);
   border-radius: 999px;
   overflow: hidden;
   margin-top: 8px;
@@ -163,13 +164,13 @@
   border-radius: 999px;
   background: linear-gradient(90deg, #CC2360 0%, #6c3ef4 50%, #00bcd4 100%);
   animation: splash-barFill 4s 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  box-shadow: 0 0 10px rgba(108, 62, 244, 0.6);
+  box-shadow: 0 0 10px rgba(108, 62, 244, 0.3);
 }
 
 /* ── Loading label ── */
 .splash__label {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(26, 26, 110, 0.5);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin: 0;
