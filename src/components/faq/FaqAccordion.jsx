@@ -15,7 +15,6 @@ const FaqAccordion = ({ search }) => {
 
   const product = faqData[activeProduct];
 
-  // Filter questions by search
   const filtered = useMemo(() => {
     if (!search.trim()) return product.categories;
     const q = search.toLowerCase();
@@ -40,6 +39,9 @@ const FaqAccordion = ({ search }) => {
     setOpenQuestion(openQuestion === key ? null : key);
   };
 
+  // Hex to rgba helper for light bg
+  const hexToLight = (hex) => `${hex}18`;
+
   return (
     <section className="faq-acc" id="faq-accordion">
       {/* Product tabs */}
@@ -48,15 +50,22 @@ const FaqAccordion = ({ search }) => {
           <button
             key={p.product}
             className={`faq-acc__tab ${activeProduct === i ? "faq-acc__tab--active" : ""}`}
-            style={activeProduct === i ? { background: p.color, borderColor: p.color } : {}}
-            onClick={() => { setActiveProduct(i); setOpenCategory(null); setOpenQuestion(null); }}
+            style={activeProduct === i
+              ? { background: p.color, borderColor: p.color }
+              : { borderColor: "#e0e0e0" }
+            }
+            onClick={() => {
+              setActiveProduct(i);
+              setOpenCategory(null);
+              setOpenQuestion(null);
+            }}
           >
             {p.product}
           </button>
         ))}
       </div>
 
-      {/* Accordion body */}
+      {/* Body */}
       <div className="faq-acc__body">
         <h2 className="faq-acc__product-title" style={{ color: product.color }}>
           {product.product} FAQS
@@ -68,25 +77,35 @@ const FaqAccordion = ({ search }) => {
           filtered.map((cat, ci) => {
             const isOpenCat = openCategory === ci;
             return (
-              <div key={cat.name} className="faq-acc__category">
+              <div
+                key={cat.name}
+                className="faq-acc__category"
+                style={{
+                  "--cat-color": product.color,
+                  "--cat-color-light": hexToLight(product.color),
+                }}
+              >
                 {/* Category header */}
                 <button
                   className={`faq-acc__cat-btn ${isOpenCat ? "faq-acc__cat-btn--open" : ""}`}
-                  style={isOpenCat ? { color: product.color } : {}}
                   onClick={() => toggleCategory(ci)}
                 >
-                  <span className="faq-acc__cat-chevron" style={isOpenCat ? { transform: "rotate(90deg)", color: product.color } : {}}>
+                  <span
+                    className="faq-acc__cat-badge"
+                    style={{ "--cat-color": product.color, background: isOpenCat ? product.color : "#f0f0f8", color: isOpenCat ? "#fff" : "#aaa" }}
+                  >
+                    {ci + 1}
+                  </span>
+                  <span className="faq-acc__cat-label">{cat.name}</span>
+                  <span className="faq-acc__cat-count">{cat.questions.length} Q</span>
+                  <span className="faq-acc__cat-chevron">
                     <ChevronDown />
                   </span>
-                  {cat.name}
                 </button>
 
                 {/* Questions list */}
                 {isOpenCat && (
-                  <div
-                    className="faq-acc__questions"
-                    style={{ borderLeft: `3px solid ${product.color}`, background: product.lightBg }}
-                  >
+                  <div className="faq-acc__questions">
                     {cat.questions.map((item, qi) => {
                       const key = `${ci}-${qi}`;
                       const isOpen = openQuestion === key;
@@ -96,16 +115,14 @@ const FaqAccordion = ({ search }) => {
                             className={`faq-acc__question ${isOpen ? "faq-acc__question--open" : ""}`}
                             onClick={() => toggleQuestion(key)}
                           >
-                            <span className="faq-acc__q-bullet">•</span>
+                            <span className="faq-acc__q-num">{qi + 1}</span>
                             <span className="faq-acc__q-text">{item.q}</span>
                             <span className={`faq-acc__q-chevron ${isOpen ? "faq-acc__q-chevron--open" : ""}`}>
                               <ChevronDown />
                             </span>
                           </button>
                           {isOpen && (
-                            <div className="faq-acc__answer">
-                              {item.a}
-                            </div>
+                            <div className="faq-acc__answer">{item.a}</div>
                           )}
                         </div>
                       );
