@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="footer__contact">
               <li>
                 <img src={mapPin} alt="Location" className="footer__contact-icon" />
-                2a Shillingbam Place, Minuwari Estate, Leki, Lagos.
+                9 Durban Street, Wuse 2, Abuja.
               </li>
               <li>
                 <img src={envelope} alt="Email" className="footer__contact-icon" />

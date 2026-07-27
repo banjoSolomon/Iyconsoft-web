@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/industries/IndustrySection.css";
-import promoImg from "../../assets/images/insignt1.png";
+import promoImg from "../../assets/images/Tele1.jpeg";
 
 const TelecomSection = () => (
   <section className="ind-section ind-section--light" id="ind-telecom">

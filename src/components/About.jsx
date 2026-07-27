@@ -20,7 +20,7 @@ const About = () => {
             empower businesses and individuals with secure, reliable, and accessible services that
             work seamlessly with or without internet connectivity.
           </p>
-          <a href="#about" className="btn btn--dark about__cta">Read More</a>
+          <a href="/about" className="btn btn--dark about__cta">Read More</a>
         </div>
       </div>
     </section>

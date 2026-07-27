@@ -25,9 +25,6 @@ const GovernmentSection = () => (
           <a href="/solutions#sol-vvpss" className="ind-section__btn" style={{ borderColor: "#1a6e3a", color: "#1a6e3a", "--btn-color": "#1a6e3a" }}>
             Explore VVPSS
           </a>
-          <a href="/solutions#sol-itravel" className="ind-section__btn" style={{ borderColor: "#2e7d32", color: "#2e7d32", "--btn-color": "#2e7d32" }}>
-            Explore iTravel
-          </a>
         </div>
       </div>
 

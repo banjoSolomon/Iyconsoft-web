@@ -32,6 +32,14 @@ const SmsIcon = () => (
 const callerServices = [
   {
     name: "WhoDeyCall",
+    network: "MTN",
+    networkColor: "#f5a623",
+    networkBg: "#fff8ec",
+    accentColor: "#f5a623",
+    accentBg: "#fff8ec",
+    iconBg: "linear-gradient(135deg, #f5a623, #e67e22)",
+    cardBorder: "rgba(245,166,35,0.3)",
+    cardBg: "#fffdf7",
     icon: <PhoneIcon />,
     codes: [
       { type: "USSD", value: "*4800#", icon: <UssdIcon /> },
@@ -40,6 +48,14 @@ const callerServices = [
   },
   {
     name: "MyCaller",
+    network: "Airtel",
+    networkColor: "#CC2360",
+    networkBg: "#fef0f5",
+    accentColor: "#CC2360",
+    accentBg: "#fef0f5",
+    iconBg: "linear-gradient(135deg, #CC2360, #9b1a47)",
+    cardBorder: "rgba(204,35,96,0.3)",
+    cardBg: "#fff8fb",
     icon: <PhoneIcon />,
     codes: [
       { type: "USSD", value: "*4552#", icon: <UssdIcon /> },
@@ -51,20 +67,43 @@ const callerServices = [
 const rightContent = (
   <div className="caller-services">
     {callerServices.map((svc, i) => (
-      <div key={i} className="caller-services__card">
+      <div
+        key={i}
+        className="caller-services__card"
+        style={{ borderColor: svc.cardBorder, background: svc.cardBg }}
+      >
         {/* Header */}
         <div className="caller-services__header">
-          <div className="caller-services__icon">{svc.icon}</div>
+          <div className="caller-services__icon" style={{ background: svc.iconBg }}>
+            {svc.icon}
+          </div>
           <h4 className="caller-services__name">{svc.name}</h4>
+          <span
+            className="caller-services__network"
+            style={{ background: svc.networkBg, color: svc.networkColor, border: `1.5px solid ${svc.networkColor}` }}
+          >
+            {svc.network}
+          </span>
         </div>
 
         {/* USSD + SMS badges */}
         <div className="caller-services__codes">
           {svc.codes.map((code, j) => (
-            <div key={j} className="caller-services__code-badge">
-              <div className="caller-services__code-icon">{code.icon}</div>
+            <div
+              key={j}
+              className="caller-services__code-badge"
+              style={{ background: svc.accentBg, borderColor: `${svc.accentColor}22` }}
+            >
+              <div
+                className="caller-services__code-icon"
+                style={{ background: svc.accentColor }}
+              >
+                {code.icon}
+              </div>
               <div className="caller-services__code-info">
-                <span className="caller-services__code-type">{code.type}</span>
+                <span className="caller-services__code-type" style={{ color: svc.accentColor }}>
+                  {code.type}
+                </span>
                 <span className="caller-services__code-value">{code.value}</span>
               </div>
             </div>

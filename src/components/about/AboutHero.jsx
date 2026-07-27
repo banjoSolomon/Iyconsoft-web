@@ -31,7 +31,7 @@ const AboutHero = () => {
             their customers more effectively.
           </p>
           <div className="about-hero__actions">
-            <a href="#solutions" className="btn btn--dark">Explore Solutions</a>
+            <a href="/solutions" className="btn btn--dark">Explore Solutions</a>
             <a href="#contact" className="btn btn--primary">Contact Us</a>
           </div>
         </div>

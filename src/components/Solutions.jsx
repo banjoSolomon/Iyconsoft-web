@@ -13,6 +13,7 @@ const solutions = [
     title: "MyCaller",
     description: "Know who's calling before you pick up.",
     btnColor: "#6c3ef4",
+    link: "/solutions#sol-caller",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const solutions = [
     title: "Teticket",
     description: "Seamless digital ticketing and payment collections.",
     btnColor: "#f39c12",
+    link: "/solutions#sol-teticket",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const solutions = [
     title: "iTravel",
     description: "Travel booking made easy.",
     btnColor: "#00bcd4",
+    link: "/solutions#sol-itravel",
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const solutions = [
     title: "VVPSS",
     description: "Digital governance made simple.",
     btnColor: "#1a1a6e",
+    link: "/solutions#sol-vvpss",
   },
 ];
 
@@ -66,12 +70,11 @@ const Solutions = () => {
                 <h3 className="solution-card__title">{solution.title}</h3>
                 <p className="solution-card__desc">{solution.description}</p>
                 <a
-                  href="#solutions"
+                  href={solution.link}
                   className="solution-card__btn"
                   style={{
                     background: solution.btnColor,
                     color: "#fff",
-                    "--btn-hover": solution.btnColor,
                   }}
                 >
                   Learn More
