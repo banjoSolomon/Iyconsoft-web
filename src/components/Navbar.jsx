@@ -44,7 +44,11 @@ const Navbar = () => {
               Careers
             </NavLink>
           </li>
-          <li><a href="#faq" className="navbar__link" onClick={closeMenu}>FAQs</a></li>
+          <li>
+            <NavLink to="/faq" className={({ isActive }) => `navbar__link${isActive ? " navbar__link--active" : ""}`} onClick={closeMenu}>
+              FAQs
+            </NavLink>
+          </li>
         </ul>
 
         {/* CTA Button */}
