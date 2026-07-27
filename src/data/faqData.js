@@ -1,8 +1,11 @@
 const faqData = [
   {
     product: "MyCaller",
-    color: "#6c3ef4",
-    lightBg: "#f0ebff",
+    network: "Airtel",
+    networkColor: "#fff",
+    networkBg: "#CC2360",
+    color: "#CC2360",
+    lightBg: "#fef0f5",
     categories: [
       {
         name: "General Information",
@@ -95,8 +98,11 @@ const faqData = [
   },
   {
     product: "WhoDeyCall",
-    color: "#CC2360",
-    lightBg: "#fef0f5",
+    network: "MTN",
+    networkColor: "#1a1a2e",
+    networkBg: "#f5a623",
+    color: "#f5a623",
+    lightBg: "#fff8ec",
     categories: [
       {
         name: "General Information",
@@ -195,6 +201,9 @@ const faqData = [
   },
   {
     product: "iTravel",
+    network: null,
+    networkColor: null,
+    networkBg: null,
     color: "#00bcd4",
     lightBg: "#e8fafd",
     categories: [

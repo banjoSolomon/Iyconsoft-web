@@ -14,7 +14,7 @@ const AboutCTA = () => {
         </div>
         <div className="about-cta__actions reveal-right">
           <a href="#contact" className="btn btn--outline-white">Contact Us</a>
-          <a href="#solutions" className="btn btn--primary">Explore Solutions</a>
+          <a href="/solutions" className="btn btn--primary">Explore Solutions</a>
         </div>
       </div>
     </section>

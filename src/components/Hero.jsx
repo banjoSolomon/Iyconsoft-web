@@ -14,7 +14,7 @@ const Hero = () => {
             Building innovative digital solutions that work with or without internet connectivity.
           </p>
           <div className="hero__actions">
-            <a href="#solutions" className="btn btn--primary">Explore Solutions</a>
+            <a href="/solutions" className="btn btn--primary">Explore Solutions</a>
             <a href="#contact" className="btn btn--outline">Contact Us</a>
           </div>
         </div>

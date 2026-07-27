@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer__grid">
           {/* Brand column */}
           <div className="footer__brand">
-            <a href="#home" className="footer__logo">
+            <a href="/" className="footer__logo">
               <img src={logo} alt="Iyconsoft" onError={(e) => { e.target.style.display = "none"; }} />
             </a>
             <p className="footer__brand-desc">

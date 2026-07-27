@@ -13,7 +13,7 @@ const CTA = () => {
         </div>
         <div className="cta-banner__actions reveal-right">
           <a href="#contact" className="btn btn--outline-white">Contact Us</a>
-          <a href="#solutions" className="btn btn--white">Explore Solutions</a>
+          <a href="/solutions" className="btn btn--white">Explore Solutions</a>
         </div>
       </div>
     </section>

@@ -51,8 +51,8 @@ const FaqAccordion = ({ search }) => {
             key={p.product}
             className={`faq-acc__tab ${activeProduct === i ? "faq-acc__tab--active" : ""}`}
             style={activeProduct === i
-              ? { background: p.color, borderColor: p.color }
-              : { borderColor: "#e0e0e0" }
+              ? { background: p.color, borderColor: p.color, color: "#fff" }
+              : { borderColor: "#e0e0e0", color: "#888" }
             }
             onClick={() => {
               setActiveProduct(i);
@@ -61,6 +61,17 @@ const FaqAccordion = ({ search }) => {
             }}
           >
             {p.product}
+            {p.network && (
+              <span
+                className="faq-acc__tab-network"
+                style={activeProduct === i
+                  ? { background: p.networkBg, color: p.networkColor }
+                  : { background: "#f0f0f8", color: "#aaa" }
+                }
+              >
+                {p.network}
+              </span>
+            )}
           </button>
         ))}
       </div>

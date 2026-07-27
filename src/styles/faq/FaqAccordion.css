@@ -60,6 +60,20 @@
   border-radius: 999px;
 }
 
+/* Network badge inside tab */
+.faq-acc__tab-network {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 8px;
+  transition: background 0.25s, color 0.25s;
+  vertical-align: middle;
+}
+
 /* ── Product title ── */
 .faq-acc__product-title {
   font-size: clamp(1.5rem, 2.5vw, 2.1rem);
