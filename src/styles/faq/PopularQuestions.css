@@ -1,0 +1,137 @@
+/* ============================================
+   POPULAR QUESTIONS — PopularQuestions.css
+   ============================================ */
+
+@keyframes pq-fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.popular-q {
+  background: #f4f6fb;
+  padding: 0 24px 60px;
+}
+
+.popular-q__container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
+
+.popular-q__title {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+/* ── List ── */
+.popular-q__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Single item ── */
+.popular-q__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 16px;
+  border-bottom: 1px solid #f0f0f6;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.popular-q__item:last-child {
+  border-bottom: none;
+}
+
+.popular-q__item:hover {
+  background: var(--pq-color, #CC2360)12;
+  transform: translateX(4px);
+}
+
+/* ── Left side ── */
+.popular-q__item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.popular-q__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f4f4f8;
+  color: #aaa;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.popular-q__item:hover .popular-q__icon {
+  background: var(--pq-color, #CC2360);
+  color: #fff;
+}
+
+.popular-q__question {
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: #444;
+  transition: color 0.2s;
+  line-height: 1.4;
+}
+
+.popular-q__item:hover .popular-q__question {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+/* ── Tag pill ── */
+.popular-q__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1.5px solid;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: background 0.25s, color 0.25s;
+  letter-spacing: 0.3px;
+}
+
+.popular-q__item:hover .popular-q__tag {
+  background: var(--pq-color, #CC2360);
+  color: #fff !important;
+  border-color: var(--pq-color, #CC2360) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .popular-q__container {
+    padding: 28px 20px;
+  }
+
+  .popular-q__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .popular-q__tag {
+    align-self: flex-end;
+  }
+}
