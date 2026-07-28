@@ -1,6 +1,10 @@
+/* ============================================
+   LEADERSHIP — Leadership.css
+   ============================================ */
+
 .leadership {
-  padding: 80px 0;
-  background: #fff;
+  padding: 90px 0;
+  background: #f8f9ff;
 }
 
 .leadership__container {
@@ -9,102 +13,218 @@
   padding: 0 24px;
 }
 
+/* ── Header ── */
 .leadership__header {
   text-align: center;
-  margin-bottom: 52px;
+  margin-bottom: 56px;
+}
+
+.leadership__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #CC2360;
+  background: rgba(204, 35, 96, 0.08);
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin: 0 0 16px;
+  border: 1px solid rgba(204, 35, 96, 0.15);
 }
 
 .leadership__title {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
   font-weight: 800;
   color: #1a1a2e;
+  margin: 0 0 14px;
+}
+
+.leadership__subtitle {
+  font-size: 0.95rem;
+  color: #888;
   margin: 0;
 }
 
-/* Grid */
+/* ── Grid rows ── */
 .leadership__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 28px;
+  align-items: center;
 }
 
-/* Card */
+.leadership__row {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ── Card ── */
 .leader-card {
-  border-radius: 16px;
+  background: #fff;
+  border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+  position: relative;
+  width: 255px;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
 .leader-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 36px rgba(108, 62, 244, 0.12);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.16);
 }
 
-/* Image placeholder */
-.leader-card__image-placeholder {
+.leader-card--ceo {
+  width: 320px;
+}
+
+/* ── Photo wrap ── */
+.leader-card__photo-wrap {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background: rgba(0, 0, 0, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  height: 300px;
+  overflow: hidden;
   position: relative;
 }
 
-.leader-card__image-placeholder::before,
-.leader-card__image-placeholder::after {
-  content: "";
+.leader-card--ceo .leader-card__photo-wrap {
+  height: 380px;
+}
+
+.leader-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Joachim's photo — face is lower in the image */
+.leader-card--joachim .leader-card__photo {
+  object-position: center 65%;
+}
+
+.leader-card:hover .leader-card__photo {
+  transform: scale(1.07);
+}
+
+/* ── Hover overlay — slides up from bottom with name ── */
+.leader-card__hover-overlay {
   position: absolute;
-  background: #d0d0d0;
-  height: 1px;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  pointer-events: none;
 }
 
-.leader-card__image-placeholder::before {
-  width: 60%;
-  transform: rotate(-35deg);
+.leader-card:hover .leader-card__hover-overlay {
+  opacity: 1;
 }
 
-.leader-card__image-placeholder::after {
-  width: 60%;
-  transform: rotate(35deg);
+.leader-card__hover-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 4px;
+  transform: translateY(12px);
+  transition: transform 0.35s ease 0.05s;
+  line-height: 1.3;
 }
 
-/* Info */
+.leader-card:hover .leader-card__hover-name {
+  transform: translateY(0);
+}
+
+.leader-card__hover-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  transform: translateY(12px);
+  transition: transform 0.35s ease 0.1s;
+  background: rgba(255, 255, 255, 0.22);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.leader-card:hover .leader-card__hover-title {
+  transform: translateY(0);
+}
+
+/* ── Static info below photo ── */
 .leader-card__info {
-  padding: 20px 24px;
-  text-align: center;
+  padding: 18px 20px 20px;
+  background: var(--card-bg, #f0ebff);
+  position: relative;
+}
+
+.leader-card__accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent, #6c3ef4);
 }
 
 .leader-card__name {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 800;
   color: #1a1a2e;
-  margin: 0 0 6px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  margin: 6px 0 6px;
+  line-height: 1.3;
 }
 
 .leader-card__title {
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.74rem;
+  color: var(--accent, #6c3ef4);
+  font-weight: 700;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .leadership__grid {
-    grid-template-columns: 1fr 1fr;
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .leadership__row:last-child {
+    flex-wrap: wrap;
+  }
+
+  .leader-card {
+    width: calc(50% - 14px);
   }
 }
 
-@media (max-width: 480px) {
-  .leadership__grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    margin: 0 auto;
+@media (max-width: 700px) {
+  .leadership__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leader-card,
+  .leader-card--ceo {
+    width: 100%;
+    max-width: 340px;
   }
 }
