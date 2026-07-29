@@ -364,7 +364,7 @@
 }
 
 /* ── RIGHT ── */
-.faq-acc__right { flex: 1; min-width: 0; }
+.faq-acc__right { flex: 1; min-width: 0; max-width: 100%; }
 
 /* ── 2x2 product cards ── */
 .faq-acc__cards-grid {
@@ -461,16 +461,36 @@
 
 /* ── Responsive ── */
 @media (max-width: 960px) {
-  .faq-acc__layout { flex-direction: column; gap: 36px; }
-  .faq-acc__left { flex: none; width: 100%; position: static; }
+  .faq-acc__layout {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .faq-acc__left {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+  .faq-acc__right {
+    width: 100%;
+    flex: none;
+  }
+  .faq-acc__cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
+  .faq-acc__layout {
+    padding: 24px 16px 60px;
+  }
   .faq-acc__cards-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
   }
   .faq-acc__answer { padding-left: 44px; }
 }
-@media (max-width: 440px) {
+@media (max-width: 400px) {
   .faq-acc__cards-grid {
     grid-template-columns: 1fr;
   }
