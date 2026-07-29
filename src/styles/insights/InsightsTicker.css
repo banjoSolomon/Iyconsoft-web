@@ -1,0 +1,98 @@
+/* ============================================
+   INSIGHTS TICKER — InsightsTicker.css
+   ============================================ */
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ins-ticker {
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  overflow: hidden;
+  padding: 16px 0;
+  position: relative;
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Fade edges */
+.ins-ticker::before,
+.ins-ticker::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 140px;
+  z-index: 2;
+  pointer-events: none;
+}
+.ins-ticker::before {
+  left: 0;
+  background: linear-gradient(to right, #0f0c29, transparent);
+}
+.ins-ticker::after {
+  right: 0;
+  background: linear-gradient(to left, #24243e, transparent);
+}
+
+/* Track — NO hover pause */
+.ins-ticker__track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+/* ── Each item ── */
+.ins-ticker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 28px;
+}
+
+/* Logo pill */
+.ins-ticker__logo-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.ins-ticker__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+/* Text */
+.ins-ticker__text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.5px;
+  font-family: "Urbanist", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Separator dot */
+.ins-ticker__sep {
+  font-size: 0.45rem;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  opacity: 0.8;
+  flex-shrink: 0;
+}

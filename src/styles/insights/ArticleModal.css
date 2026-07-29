@@ -1,0 +1,130 @@
+/* ============================================
+   ARTICLE MODAL — ArticleModal.css
+   ============================================ */
+
+@keyframes art-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes art-slideUp {
+  from { opacity: 0; transform: translateY(50px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.art-modal__overlay {
+  position: fixed; inset: 0; z-index: 9998;
+  background: rgba(10,10,40,0.6);
+  backdrop-filter: blur(6px);
+  display: flex; align-items: flex-start;
+  justify-content: center;
+  padding: 32px 24px;
+  overflow-y: auto;
+  animation: art-fadeIn 0.25s ease both;
+}
+
+.art-modal__box {
+  background: #fff;
+  border-radius: 24px;
+  width: 100%; max-width: 760px;
+  position: relative;
+  box-shadow: 0 30px 100px rgba(0,0,0,0.25);
+  animation: art-slideUp 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+  overflow: hidden;
+  margin: auto;
+}
+
+.art-modal__close {
+  position: absolute; top: 16px; right: 16px; z-index: 2;
+  background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
+  border: none; border-radius: 50%;
+  width: 36px; height: 36px;
+  font-size: 0.85rem; cursor: pointer; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+.art-modal__close:hover { background: #CC2360; }
+
+.art-modal__image {
+  width: 100%; height: 300px;
+  overflow: hidden; position: relative;
+}
+.art-modal__image img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.art-modal__image-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+  display: flex; align-items: flex-end; padding: 20px;
+}
+.art-modal__cat {
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 1px;
+  text-transform: uppercase; padding: 4px 14px;
+  border-radius: 999px; color: #fff;
+}
+
+.art-modal__content {
+  padding: 32px 36px 36px;
+}
+
+.art-modal__title {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800; color: #1a1a2e;
+  line-height: 1.25; margin: 0 0 18px;
+}
+
+.art-modal__meta {
+  display: flex; gap: 16px; align-items: center;
+  font-size: 0.8rem; color: #aaa; flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.art-modal__meta span { display: flex; align-items: center; gap: 5px; }
+
+.art-modal__tags {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.art-modal__tag {
+  font-size: 0.72rem; font-weight: 600; padding: 3px 10px;
+  border-radius: 999px; background: #f4f4f8; color: #666;
+}
+
+.art-modal__divider {
+  height: 1px; background: #f0f0f6; margin-bottom: 24px;
+}
+
+.art-modal__body {
+  font-size: 0.93rem; color: #444; line-height: 2;
+  white-space: pre-wrap;
+}
+.art-modal__body strong {
+  font-weight: 800; color: #1a1a2e; font-size: 1rem;
+}
+
+.art-modal__footer {
+  display: flex; align-items: center; gap: 16px;
+  margin-top: 36px; padding-top: 24px;
+  border-top: 1px solid #f0f0f6; flex-wrap: wrap;
+}
+
+.art-modal__back-btn {
+  background: #f4f4f8; border: none; border-radius: 8px;
+  padding: 10px 20px; font-size: 0.87rem; font-weight: 700;
+  color: #555; cursor: pointer; font-family: "Urbanist", sans-serif;
+  transition: background 0.2s, transform 0.2s;
+}
+.art-modal__back-btn:hover { background: #e8e8f0; transform: translateX(-3px); }
+
+.art-modal__cta {
+  padding: 10px 24px; background: #CC2360; color: #fff;
+  border-radius: 8px; font-size: 0.87rem; font-weight: 700;
+  text-decoration: none; transition: all 0.25s ease;
+}
+.art-modal__cta:hover {
+  background: #a81d50; transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204,35,96,0.3);
+}
+
+@media (max-width: 600px) {
+  .art-modal__content { padding: 24px 20px 28px; }
+  .art-modal__image { height: 220px; }
+}
