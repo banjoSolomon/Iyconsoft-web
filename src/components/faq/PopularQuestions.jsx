@@ -23,7 +23,7 @@ const popularItems = [
   {
     question: "How secure is VVPSS ?",
     tag: "VVPSS Security",
-    productIndex: null,
+    productIndex: 3,
     color: "#1a6e3a",
   },
   {
