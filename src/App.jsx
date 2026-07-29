@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import "./styles/global.css";
 import "./styles/animations.css";
 
@@ -16,6 +16,7 @@ import IndustriesPage from "./pages/IndustriesPage";
 import CareersPage from "./pages/CareersPage";
 import FaqPage from "./pages/FaqPage";
 import InsightsPage from "./pages/InsightsPage";
+import ContactPage from "./pages/ContactPage";
 
 // Global contact modal context
 export const ContactContext = React.createContext(null);
@@ -23,6 +24,7 @@ export const ContactContext = React.createContext(null);
 const AppContent = () => {
   useScrollReveal();
   const location = useLocation();
+  const navigate = useNavigate();
   const [showContact, setShowContact] = React.useState(false);
 
   // Re-trigger scroll reveal on route change
@@ -49,18 +51,18 @@ const AppContent = () => {
     return () => clearTimeout(t);
   }, [location.pathname]);
 
-  // Intercept all #contact clicks globally
+  // Intercept all #contact clicks — navigate to /contact page
   React.useEffect(() => {
     const handleClick = (e) => {
       const link = e.target.closest("a");
       if (link && link.getAttribute("href") === "#contact") {
         e.preventDefault();
-        setShowContact(true);
+        navigate("/contact");
       }
     };
     document.addEventListener("click", handleClick);
     return () => document.removeEventListener("click", handleClick);
-  }, []);
+  }, [navigate]);
 
   return (
     <ContactContext.Provider value={{ openContact: () => setShowContact(true) }}>
@@ -74,6 +76,7 @@ const AppContent = () => {
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
         {showContact && <ContactModal onClose={() => setShowContact(false)} />}

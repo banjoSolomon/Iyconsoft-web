@@ -56,7 +56,7 @@ const Navbar = () => {
         </ul>
 
         {/* CTA Button */}
-        <a href="#contact" className="navbar__cta">Contact Us</a>
+        <a href="/contact" className="navbar__cta">Contact Us</a>
 
         {/* Hamburger */}
         <button

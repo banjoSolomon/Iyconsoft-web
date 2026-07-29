@@ -81,7 +81,7 @@ const ArticleModal = ({ article, onClose }) => {
             <button className="art-modal__back-btn" onClick={onClose}>
               ← Back to Insights
             </button>
-            <a href="#contact" className="art-modal__cta">
+            <a href="/contact" className="art-modal__cta">
               Contact Us
             </a>
           </div>

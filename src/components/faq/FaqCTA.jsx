@@ -16,7 +16,7 @@ const FaqCTA = () => (
         <a href="mailto:tech@iyconsoft.com" className="faq-cta__btn faq-cta__btn--outline">
           Send us a message
         </a>
-        <a href="#contact" className="faq-cta__btn faq-cta__btn--primary">
+        <a href="/contact" className="faq-cta__btn faq-cta__btn--primary">
           Contact Us
         </a>
       </div>
