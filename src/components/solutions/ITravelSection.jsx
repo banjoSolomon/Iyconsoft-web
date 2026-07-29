@@ -4,6 +4,10 @@ import "../../styles/solutions/ITravelTimeline.css";
 import imgLeft from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 5 (1).png";
 import imgRight from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 4.png";
 import logo from "../../assets/images/itravel_logo-removebg-preview (1) 1.png";
+import benefitIcon1 from "../../assets/images/Timer itravelbenefit.png";
+import benefitIcon2 from "../../assets/images/Gear itravelbenefit.png";
+import benefitIcon3 from "../../assets/images/ChartLineUp itravelbenefit.png";
+import benefitIcon4 from "../../assets/images/Gear itravelbenefit.png";
 
 const steps = [
   {
@@ -109,6 +113,7 @@ const ITravelSection = () => (
       "Revenue tracking",
       "Operational efficiency",
     ]}
+    benefitIcons={[benefitIcon1, benefitIcon2, benefitIcon3, benefitIcon4]}
     benefitBorder="#f39c12"
   />
 );

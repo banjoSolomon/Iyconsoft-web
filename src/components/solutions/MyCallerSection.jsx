@@ -4,6 +4,10 @@ import "../../styles/solutions/CallerServices.css";
 import imgLeft from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (3) 2.png";
 import imgRight from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 2.png";
 import logo from "../../assets/images/Group 39.png";
+import benefitIcon1 from "../../assets/images/ShieldCheck mycallerbenefit.png";
+import benefitIcon2 from "../../assets/images/Prohibit mycallerbenefit.png";
+import benefitIcon3 from "../../assets/images/Info mycallerbenefit.png";
+import benefitIcon4 from "../../assets/images/CalendarDots mycallerbenefit.png";
 
 /* Phone SVG */
 const PhoneIcon = () => (
@@ -144,6 +148,7 @@ const MyCallerSection = () => (
       "Better caller awareness",
       "Flexible subscription options",
     ]}
+    benefitIcons={[benefitIcon1, benefitIcon2, benefitIcon3, benefitIcon4]}
     benefitBorder="#f39c12"
   />
 );

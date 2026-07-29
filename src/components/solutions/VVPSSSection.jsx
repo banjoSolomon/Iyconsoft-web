@@ -4,6 +4,10 @@ import "../../styles/solutions/VVPSSIdealFor.css";
 import imgLeft from "../../assets/images/vpss2solutionimage.png";
 import imgRight from "../../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 3 (1).png";
 import logo from "../../assets/images/vvpss logo 1.png";
+import benefitIcon1 from "../../assets/images/Target vpssbenefit.png";
+import benefitIcon2 from "../../assets/images/ChartBarvpsbenefit.png";
+import benefitIcon3 from "../../assets/images/UsersFour vpssbenefit.png";
+import benefitIcon4 from "../../assets/images/ShieldCheckvpssbenefit.png";
 
 const idealItems = [
   {
@@ -82,6 +86,7 @@ const VVPSSSection = () => (
       "Audit-compliant results",
       "Remote participation",
     ]}
+    benefitIcons={[benefitIcon1, benefitIcon2, benefitIcon3, benefitIcon4]}
     benefitBorder="#2e7d32"
   />
 );

@@ -4,6 +4,10 @@ import "../../styles/solutions/TeTicketServices.css";
 import imgLeft from "../../assets/images/ChatGPT Image Jun 14, 2026, 05_47_11 PM 1.png";
 import imgRight from "../../assets/images/ChatGPT Image Jun 14, 2026, 05_53_20 PM 1.png";
 import logo from "../../assets/images/Group 41.png";
+import benefitIcon1 from "../../assets/images/Lock Ttickctbenefit.png";
+import benefitIcon2 from "../../assets/images/Lightning teticktbenefit.png";
+import benefitIcon3 from "../../assets/images/Eye Teticktbenefit.png";
+import benefitIcon4 from "../../assets/images/Gear itravelbenefit.png";
 
 const services = [
   {
@@ -92,6 +96,7 @@ const TeTicketSection = () => (
       "Full transparency",
       "Improved efficiency",
     ]}
+    benefitIcons={[benefitIcon1, benefitIcon2, benefitIcon3, benefitIcon4]}
     benefitBorder="#f39c12"
   />
 );

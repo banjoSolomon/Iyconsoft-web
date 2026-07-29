@@ -67,6 +67,7 @@ const ProductSection = ({
   rightTitle,
   rightContent,
   benefits = [],
+  benefitIcons = [],
   benefitBorder = "#6c3ef4",
 }) => {
   const stripBg = benefitsBg || accentColor;
@@ -131,7 +132,10 @@ const ProductSection = ({
               <div key={i} className="prod-section__benefit-card reveal-scale">
                 <div className="prod-section__benefit-icon-wrap">
                   <span className="prod-section__benefit-icon">
-                    {BenefitSVGs[i] || BenefitSVGs[0]}
+                    {benefitIcons[i]
+                      ? <img src={benefitIcons[i]} alt={b} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                      : (BenefitSVGs[i] || BenefitSVGs[0])
+                    }
                   </span>
                 </div>
                 <span className="prod-section__benefit-num">0{i + 1}</span>
