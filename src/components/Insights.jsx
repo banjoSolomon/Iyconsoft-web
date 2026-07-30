@@ -35,7 +35,7 @@ const Insights = () => {
           <p className="insights__text">
             Explore our latest articles, updates and industry stories.
           </p>
-          <a href="#insights" className="btn btn--dark insights__cta">Read More</a>
+          <a href="/insights" className="btn btn--dark insights__cta">Read More</a>
         </div>
 
       </div>
