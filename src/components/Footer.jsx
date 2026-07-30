@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li>
                 <img src={phoneCall} alt="Phone" className="footer__contact-icon" />
-                <a href="tel:+2340809661333">+234 (0) 809-661-333</a>
+                <a href="tel:+2349063628281">+234 (0) 906-362-8281</a>
               </li>
             </ul>
           </div>
@@ -61,8 +61,8 @@ const Footer = () => {
           <div className="footer__col">
             <h4 className="footer__heading">Legal</h4>
             <ul className="footer__links">
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Use</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of use</a></li>
             </ul>
           </div>
 

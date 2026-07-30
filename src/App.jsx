@@ -17,6 +17,8 @@ import CareersPage from "./pages/CareersPage";
 import FaqPage from "./pages/FaqPage";
 import InsightsPage from "./pages/InsightsPage";
 import ContactPage from "./pages/ContactPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 
 // Global contact modal context
 export const ContactContext = React.createContext(null);
@@ -77,6 +79,8 @@ const AppContent = () => {
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
         </Routes>
         <Footer />
         {showContact && <ContactModal onClose={() => setShowContact(false)} />}

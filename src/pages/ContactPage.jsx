@@ -15,8 +15,8 @@ const infoCards = [
   {
     icon: phoneIcon,
     label: "Phone",
-    value: "+234 906 362 8282",
-    href: "tel:+2349063628282",
+    value: "+234 (0) 906-362-8281",
+    href: "tel:+2349063628281",
     color: "#6c3ef4",
     bg: "#f0ebff",
   },

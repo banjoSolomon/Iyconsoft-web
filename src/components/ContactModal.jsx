@@ -36,13 +36,13 @@ const ContactModal = ({ onClose }) => {
 
         {/* Contact items */}
         <div className="cmodal__items">
-          <a href="tel:+2348096613330" className="cmodal__item">
+          <a href="tel:+2349063628281" className="cmodal__item">
             <div className="cmodal__item-icon" style={{ background: "#fef0f5" }}>
               <img src={phoneIcon} alt="Phone" />
             </div>
             <div className="cmodal__item-body">
               <span className="cmodal__item-label">Call Us</span>
-              <span className="cmodal__item-value">+234 (0) 809-661-333</span>
+              <span className="cmodal__item-value">+234 (0) 906-362-8281</span>
             </div>
             <span className="cmodal__item-arrow">→</span>
           </a>

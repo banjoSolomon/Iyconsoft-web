@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "iyconsoft"
+  },
+  "targets": {
+    "iyconsoft": {
+      "hosting": {
+        "main": [
+          "iyconsoftsolutions"
+        ]
+      }
+    }
+  }
+}
