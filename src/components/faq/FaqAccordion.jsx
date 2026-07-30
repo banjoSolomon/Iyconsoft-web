@@ -1,6 +1,20 @@
 import React, { useState, useMemo } from "react";
 import "../../styles/faq/FaqAccordion.css";
 import faqData from "../../data/faqData";
+import myCallerLogo  from "../../assets/images/Group 39.png";
+import whoDeyLogo    from "../../assets/images/Group 39.png";
+import itravelLogo   from "../../assets/images/itravel_logo-removebg-preview (1) 1.png";
+import vvpssLogo     from "../../assets/images/vvpss logo 1.png";
+import teticketLogo  from "../../assets/images/Group 41.png";
+
+// Map product name → logo
+const productLogos = {
+  "MyCaller":    myCallerLogo,
+  "WhoDeyCall":  whoDeyLogo,
+  "iTravel":     itravelLogo,
+  "VVPSS":       vvpssLogo,
+  "TeTicket":    teticketLogo,
+};
 
 const ChevronDown = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -119,13 +133,13 @@ const FaqAccordion = ({ search, selectedProduct }) => {
                   {/* Top accent bar */}
                   <div className="faq-acc__pcard-bar" />
 
-                  {/* Icon */}
+                  {/* Logo */}
                   <div className="faq-acc__pcard-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                      <circle cx="12" cy="12" r="10"/>
-                      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                      <line x1="12" y1="17" x2="12.01" y2="17"/>
-                    </svg>
+                    <img
+                      src={productLogos[p.product]}
+                      alt={p.product}
+                      style={{ width: "100%", height: "100%", objectFit: "contain" }}
+                    />
                   </div>
 
                   {/* Name + network */}

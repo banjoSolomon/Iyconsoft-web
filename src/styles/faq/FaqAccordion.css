@@ -397,21 +397,19 @@
 }
 .faq-acc__pcard:hover .faq-acc__pcard-bar { transform: scaleX(1); }
 
-/* Icon */
+/* Icon — product logo */
 .faq-acc__pcard-icon {
-  width: 52px; height: 52px; border-radius: 14px;
+  width: 56px; height: 56px; border-radius: 14px;
   background: var(--pb, #f0ebff);
   display: flex; align-items: center; justify-content: center;
-  padding: 12px; margin: 22px 22px 0;
-  transition: background 0.25s, transform 0.3s;
+  padding: 10px; margin: 22px 22px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 .faq-acc__pcard:hover .faq-acc__pcard-icon {
-  background: var(--pc, #6c3ef4); transform: rotate(-8deg) scale(1.1);
+  transform: rotate(-6deg) scale(1.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
-.faq-acc__pcard-icon svg {
-  width: 100%; height: 100%; color: var(--pc, #6c3ef4); transition: color 0.25s;
-}
-.faq-acc__pcard:hover .faq-acc__pcard-icon svg { color: #fff; }
 
 /* Name + network */
 .faq-acc__pcard-top {
