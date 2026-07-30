@@ -79,6 +79,12 @@ const FaqAccordion = ({ search, selectedProduct }) => {
                 </svg>
                 Back
               </button>
+
+              {/* Product logo */}
+              <div className="faq-acc__left-logo" style={{ background: product.lightBg }}>
+                <img src={productLogos[product.product]} alt={product.product} />
+              </div>
+
               <h3 className="faq-acc__left-title">{product.product}</h3>
               {product.network && (
                 <span className="faq-acc__left-network"
