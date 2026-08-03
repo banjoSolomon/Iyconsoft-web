@@ -3,6 +3,9 @@ import img2 from "../assets/images/AGM.png";
 import img3 from "../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (12) 2.png";
 import img4 from "../assets/images/ChatGPT Image Jun 14, 2026, 05_47_11 PM 1.png";
 import img5 from "../assets/images/WhatsApp Image 2026-06-11 at 17.56.23 (3) 2.png";
+import wdc1 from "../assets/images/whodeycallevent.jpeg";
+import wdc2 from "../assets/images/Whodeycallevent1.jpeg";
+import wdc3 from "../assets/images/Whodeycallevent2.jpeg";
 import img6 from "../assets/images/insignt3.png";
 
 const insightsData = [
@@ -219,6 +222,7 @@ By reducing spam calls and enabling caller identification, WhoDeyCall contribute
 
 Iyconsoft is working with MTN Nigeria to expand the WhoDeyCall database, improve identification accuracy, and introduce additional spam-flagging capabilities.`,
     image: img5,
+    images: [wdc1, wdc2, wdc3],
     author: "Iyconsoft Team",
     date: "May 22, 2026",
     readTime: "4 min read",

@@ -77,6 +77,21 @@ const ArticleModal = ({ article, onClose }) => {
             {renderBody(article.body)}
           </div>
 
+          {/* Event photo gallery — shown if article has extra images */}
+          {article.images && article.images.length > 0 && (
+            <div className="art-modal__gallery">
+              <h4 className="art-modal__gallery-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Event Photos
+              </h4>
+              <div className="art-modal__gallery-grid">
+                {article.images.map((img, i) => (
+                  <img key={i} src={img} alt={`${article.title} event ${i + 1}`} className="art-modal__gallery-img" />
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="art-modal__footer">
             <button className="art-modal__back-btn" onClick={onClose}>
               ← Back to Insights

@@ -9,6 +9,8 @@ import SplashScreen from "./components/SplashScreen";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
+import BackToTop from "./components/BackToTop";
+import CookieConsent from "./components/CookieConsent";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SolutionsPage from "./pages/SolutionsPage";
@@ -83,6 +85,8 @@ const AppContent = () => {
           <Route path="/terms" element={<TermsPage />} />
         </Routes>
         <Footer />
+        <BackToTop />
+        <CookieConsent />
         {showContact && <ContactModal onClose={() => setShowContact(false)} />}
       </div>
     </ContactContext.Provider>
