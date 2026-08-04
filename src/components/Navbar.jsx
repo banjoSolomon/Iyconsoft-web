@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../assets/images/Logo_Iyconsoft 1.png";
+import NavSearch from "./NavSearch";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,6 +57,7 @@ const Navbar = () => {
         </ul>
 
         {/* CTA Button */}
+        <NavSearch />
         <a href="/contact" className="navbar__cta">Contact Us</a>
 
         {/* Hamburger */}

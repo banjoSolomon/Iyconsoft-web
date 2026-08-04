@@ -1,0 +1,253 @@
+/* ============================================
+   NAV SEARCH — NavSearch.css
+   ============================================ */
+
+@keyframes ns-fadeIn {
+  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Trigger button ── */
+.ns-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f4f4f8;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.ns-trigger:hover {
+  background: #6c3ef4;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.ns-trigger svg { width: 16px; height: 16px; }
+
+/* ── Overlay ── */
+.ns-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(10, 10, 40, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 24px 24px;
+  animation: ns-fadeIn 0.2s ease both;
+}
+
+/* ── Modal ── */
+.ns-modal {
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+  overflow: hidden;
+  animation: ns-fadeIn 0.25s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+/* ── Input row ── */
+.ns-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f0f6;
+}
+
+.ns-input-row svg {
+  width: 18px;
+  height: 18px;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+.ns-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  font-family: "Urbanist", sans-serif;
+  background: transparent;
+}
+
+.ns-input::placeholder { color: #bbb; }
+
+.ns-close {
+  background: #f4f4f8;
+  border: none;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #888;
+  font-size: 0.8rem;
+  font-family: "Urbanist", sans-serif;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.ns-close:hover { background: #CC2360; color: #fff; }
+
+/* ── Results ── */
+.ns-results {
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+/* Empty / hint */
+.ns-hint {
+  padding: 32px 24px;
+  text-align: center;
+  color: #bbb;
+  font-size: 0.88rem;
+}
+
+.ns-hint svg {
+  width: 36px;
+  height: 36px;
+  color: #e0e0f0;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* Section label */
+.ns-section-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ccc;
+  padding: 10px 20px 4px;
+}
+
+/* Result item */
+.ns-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+  border-radius: 0;
+}
+
+.ns-item:hover, .ns-item--active {
+  background: #f4f4ff;
+}
+
+.ns-item__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--ic-bg, #f0ebff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ns-item__icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--ic-color, #6c3ef4);
+}
+
+.ns-item__body { flex: 1; min-width: 0; }
+
+.ns-item__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ns-item__title mark {
+  background: #fef0f5;
+  color: #CC2360;
+  font-weight: 800;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.ns-item__desc {
+  font-size: 0.78rem;
+  color: #aaa;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ns-item__badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--ic-bg, #f0ebff);
+  color: var(--ic-color, #6c3ef4);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Divider */
+.ns-divider {
+  height: 1px;
+  background: #f4f4f8;
+  margin: 4px 0;
+}
+
+/* Footer hint */
+.ns-footer {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid #f0f0f6;
+  background: #fafafa;
+}
+
+.ns-footer-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: #ccc;
+}
+
+.ns-kbd {
+  background: #f0f0f6;
+  border: 1px solid #e0e0e8;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.68rem;
+  font-family: monospace;
+  color: #888;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .ns-overlay { padding: 60px 12px 12px; }
+  .ns-modal { border-radius: 14px; }
+  .ns-results { max-height: 320px; }
+}

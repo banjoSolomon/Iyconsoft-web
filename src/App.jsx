@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
 import BackToTop from "./components/BackToTop";
 import CookieConsent from "./components/CookieConsent";
+import WhatsAppButton from "./components/WhatsAppButton";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SolutionsPage from "./pages/SolutionsPage";
@@ -86,6 +87,7 @@ const AppContent = () => {
         </Routes>
         <Footer />
         <BackToTop />
+        <WhatsAppButton />
         <CookieConsent />
         {showContact && <ContactModal onClose={() => setShowContact(false)} />}
       </div>
