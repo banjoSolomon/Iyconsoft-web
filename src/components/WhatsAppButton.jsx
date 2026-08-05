@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/WhatsAppButton.css";
 
-const WHATSAPP_NUMBER = "2349063628281"; // Your number without +
+const WHATSAPP_NUMBER = "2349063628281"; 
 const MESSAGE = "Hello Iyconsoft! I'd like to learn more about your digital solutions.";
 
 const WhatsAppButton = () => {

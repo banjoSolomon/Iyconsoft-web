@@ -1,0 +1,223 @@
+/* ============================================
+   CEO SPOTLIGHT — CeoSpotlight.css
+   ============================================ */
+
+.ceo-spotlight {
+  background: #f8f9ff;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.ceo-spotlight__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ── Left: image ── */
+.ceo-spotlight__image-wrap {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.ceo-spotlight__img-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.14);
+}
+
+.ceo-spotlight__img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ceo-spotlight__img-card:hover .ceo-spotlight__img {
+  transform: scale(1.04);
+}
+
+/* Floating name badge */
+.ceo-spotlight__badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(26,26,110,0.92) 0%, transparent 100%);
+  padding: 40px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ceo-spotlight__badge-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.ceo-spotlight__badge-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffd54f;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Decorative accent square */
+.ceo-spotlight__accent {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #CC2360, #6c3ef4);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* ── Right: content ── */
+.ceo-spotlight__content {
+  flex: 1.1;
+  min-width: 0;
+}
+
+.ceo-spotlight__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #CC2360;
+  background: rgba(204,35,96,0.08);
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin: 0 0 18px;
+  border: 1px solid rgba(204,35,96,0.15);
+}
+
+.ceo-spotlight__title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 28px;
+}
+
+.ceo-spotlight__title span {
+  background: linear-gradient(135deg, #6c3ef4, #CC2360);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pull quote */
+.ceo-spotlight__quote {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 24px 24px 32px;
+  margin: 0 0 24px;
+  border-left: 4px solid #6c3ef4;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.ceo-spotlight__quote-mark {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  font-size: 4rem;
+  color: #6c3ef4;
+  opacity: 0.15;
+  font-family: Georgia, serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Bio */
+.ceo-spotlight__bio {
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.85;
+  margin: 0 0 32px;
+}
+
+/* Stats row */
+.ceo-spotlight__stats {
+  display: flex;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid #e8e8f4;
+  background: #fff;
+}
+
+.ceo-spotlight__stat {
+  flex: 1;
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.ceo-spotlight__stat:hover {
+  background: #f4f4ff;
+}
+
+.ceo-spotlight__stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0; top: 15%; height: 70%;
+  width: 1px;
+  background: #e8e8f4;
+}
+
+.ceo-spotlight__stat-num {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #6c3ef4, #CC2360);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 4px;
+}
+
+.ceo-spotlight__stat-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .ceo-spotlight__container {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .ceo-spotlight__img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ceo-spotlight__img { height: 320px; }
+  .ceo-spotlight__quote { padding: 20px 18px 20px 22px; font-size: 0.9rem; }
+}
