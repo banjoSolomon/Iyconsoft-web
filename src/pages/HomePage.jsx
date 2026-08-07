@@ -6,6 +6,7 @@ import Solutions from "../components/Solutions";
 import Industries from "../components/Industries";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Insights from "../components/Insights";
+import Videos from "../components/Videos";
 import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
 
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Industries />
       <WhyChooseUs />
       <Insights />
+      <Videos />
       <Testimonials />
       <CTA />
     </main>
